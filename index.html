@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule Autonomia</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <main class="card" id="calcRoute">
+            <form class="input-wrapper" id="autonomyAutoform">
+                <h1>CALCULE A AUTONOMIA</h1>
+                <label for="quilometers">Informe quantos quilômetros você rodou: </label>
+                <input type="text" id="quilometers" required>
+                <label for="oil">Informe quantos litros de gasolina você colocou: </label>
+                <input type="text" id="oil" required>
+                <label for="priceOil">Qual o preço do Lt da gasolina? </label>
+                <input type="text" id="priceOil" onkeypress="return(moeda(this, '.', ',', event))" required>
+                <label for="kmTrip">Quantos quilômetros têm a sua viagem?</label>
+                <input type="text" id="kmTrip" required>
+                
+                <button type="submit" class="handleClick">Calcular</button>
+                
+                <label for="media">A média de quilômetros por litro é: </label>
+                <input type="text" id="media" readonly>
+                <label for="totalConsuption">Valor total de Combustível</label>
+                <input type="text" id="totalConsuption" onkeypress="return(moeda(this, '.', ',', event))" readonly>
+                
+            </form>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
